@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Virtual</title>
+    <link rel="icon" href="./yardsale-logos/favicon_bota_fora.svg" type="image/svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --very-light-pink: #c7c7c7;
+            --text-input-field: #f7f7f7;
+            --button: #acd9b2; /*hospital-green*/
+            --white: #ffffff;
+            --black: #000000;
+            --sm: 1.4rem;
+            --md: 1.6rem;
+            --lg: 1.8rem;
+            --card-size-sm: 14rem;
+            --card-size-md: 24rem;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            font-size: 62.5%;
+        }
+        body {
+            font-family: 'Quicksand', sans-serif;
+        }
+        .mobile-menu {
+            padding: 4rem;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            font-size: var(--lg);
+        }
+        .mobile-menu ul {
+            list-style: none;
+            margin-top: 3.2rem;
+        }
+        .mobile-menu li {
+            margin-bottom: 3.2rem;
+        }
+        .mobile-menu a {
+            text-decoration: none;
+            color: var(--black);
+            font-weight: bold;
+        }
+        .mobile-menu div ul:first-child {
+            border-bottom: 1px solid var(--very-light-pink);
+        }
+        .mobile-menu .bottom-menu li {
+            margin: 0.4rem 0;
+        }
+        .bottom-menu .email {
+            font-size: var(--sm);
+            font-weight: 300;
+        }
+        .bottom-menu .sign-out {
+            color: var(--button);
+            font-size: var(--sm);
+        }
+    </style>
+
+</head>
+<body>
+    <div class="mobile-menu">
+        <div>
+            <ul class="top-menu">        
+                <li><a href="">CATEGORIES</a></li>
+                <li><a href="">All</a></li>
+                <li><a href="">Clothes</a></li>
+                <li><a href="">Electronics</a></li>
+                <li><a href="">Furnitures</a></li>
+                <li><a href="">Toys</a></li>
+                <li><a href="">Others</a></li>
+            </ul>
+            <ul class="center-menu">
+                <li><a href="">My orders</a></li>
+                <li><a href="">My account</a></li>
+            </ul>
+        </div>
+        <ul class="bottom-menu">
+            <li><a href="" class="email">ejemplo@gmail.com</a></li>
+            <li><a href="" class="sign-out">Sign out</a></li>
+        </ul>
+    </div>
+</body>
+</html>
