@@ -34,15 +34,90 @@
         body {
             font-family: 'Quicksand', sans-serif;
         }
+        nav {
+            width: 100vw;
+            display: flex;
+            justify-content: space-between;
+            padding: 1.2rem 2.8rem;
+            border-bottom: 1px solid var(--very-light-pink);
+        }
+        .menu {
+            display: none;
+        }
+        .logo {
+            width: 12rem;
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+        }
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+        .navbar ul li a {
+            text-decoration: none;
+            color: var(--very-light-pink);
+            border: 2px solid var(--white);
+            padding: 0.8rem;
+            border-radius: 0.8rem;
+            font-size: var(--sm);
+            font-weight: bold;
+        }
+        .navbar ul li a:hover {
+            color: var(--button);
+            border: 2px solid var(--button);
+        }
+        .navbar-left ul {
+            margin-left: 1.2rem;
+        }
+        .navbar-right .email {
+            color: var(--very-light-pink);
+            font-size: var(--sm);
+            font-weight: bold;
+            margin-right: 1.2rem;
+        }
+        .navbar-shopping-cart {
+            position: relative;
+        }
+        .navbar-shopping-cart img {
+            width: 2.4rem;
+        }
+        .navbar-shopping-cart div {
+            width: 1.6rem;
+            height: 1.6rem;
+            background-color: var(--button);
+            border-radius: 50%;
+            font-size: 1.2rem;
+            font-weight: bold;
+            position: absolute;
+            top: -6px;
+            right: -3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        @media (width < 640px) {
+            .menu {
+                display: block;
+            }
+            .navbar-left ul {
+                display: none;
+            }
+            .navbar-right .email {
+                display: none;
+            }
+        }
     </style>
 
 </head>
 <body>
     <nav>
         <img src="./yardsale-icons/icon_menu.svg" alt="menu" class="menu">
-        <img src="./yardsale-logos/logo_yard_sale.svg" alt="logo" class="logo">
-
-        <div class="navbar-left">
+        
+        <div class="navbar navbar-left">
+            <img src="./yardsale-logos/logo_yard_sale.svg" alt="logo" class="logo">    
             <ul>
                 <li><a href="">All</a></li>
                 <li><a href="">Clothes</a></li>
@@ -52,12 +127,16 @@
                 <li><a href="">Others</a></li>
             </ul>
         </div>
-        
-        <div class="navbar-right">
-            <p>email@ejemplo.com</p>
-        </div>
 
-        <img src="./yardsale-icons/icon_shopping_cart.svg" alt="shopping-cart" class="navbar-shopping-cart">
+        <div class="navbar navbar-right">
+            <ul>
+                <li class="email">email@ejemplo.com</li>
+                <li class="navbar-shopping-cart">
+                    <img src="./yardsale-icons/icon_shopping_cart.svg" alt="shopping-cart">
+                    <div>2</div>
+                </li>
+            </ul>           
+        </div>        
     </nav>
 </body>
 </html>
